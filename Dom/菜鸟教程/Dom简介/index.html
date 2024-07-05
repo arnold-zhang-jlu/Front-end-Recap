@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dom简介</title>
+  </head>
+  <body>
+    <script>
+      document.write(Date());
+    </script>
+    <p id="1" style="color: aquamarine">元素1</p>
+    <p class="2">元素2</p>
+    <span>元素3</span>
+    <br />
+    <img
+      id="image"
+      src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRKDJ2Ng40CF4yr4q89wueOVHuQGwEWqq3oMg&s"
+      alt="google"
+    />
+    <button
+      onclick="document.getElementsByClassName('2')[0].style.color = 'blue'"
+    >
+      Button
+    </button>
+    <button id="4">Change BackgroundColor</button>
+
+    <script>
+      let x = document.getElementById("1");
+      let y = document.getElementsByClassName("2");
+      let z = document.getElementsByTagName("span");
+      console.log(`x: ${x} y: ${y} z: ${z}`);
+    </script>
+
+    <script>
+      document.write(Date());
+      x.innerHTML = "新元素1";
+      y.innerHTML = "新元素2";
+      z.innerHTML = "新元素3";
+    </script>
+
+    <script>
+      document.getElementById("image").src =
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSxXFgLqvujcAvXFxmkBW3Y1U16pC6UAYA3xw&s";
+      document.getElementById("image").alt = "github";
+      document.getElementById("1").style.color = "red";
+    </script>
+
+    <script>
+      function changeBackgroundColor() {
+        document.body.style.backgroundColor = "grey";
+      }
+      document
+        .getElementById("4")
+        .addEventListener("click", changeBackgroundColor);
+
+      document
+        .getElementById("4")
+        .removeEventListener("click", changeBackgroundColor);
+    </script>
+
+    <!-- <div
+      id="5"
+      onclick="alert('div被点击了')"
+      style="background-color: blueviolet"
+    >
+      div
+      <p id="6" onclick="alert('p被点击了')" style="background-color: blue">
+        嵌套在div中的p
+      </p>
+    </div> -->
+    <div id="5" style="background-color: blueviolet">
+      div
+      <p id="6" style="background-color: blue">嵌套在div中的p</p>
+    </div>
+
+    <div id="7" style="background-color: red">
+      div
+      <p id="8" style="background-color: yellowgreen">嵌套在div中的p</p>
+    </div>
+    <script>
+      document.getElementById("5").addEventListener(
+        "click",
+        function () {
+          alert("div被点击了");
+        },
+        false
+      );
+      document.getElementById("6").addEventListener(
+        "click",
+        function () {
+          alert("p被点击了");
+        },
+        false
+      );
+
+      document.getElementById("8").addEventListener(
+        "click",
+        function () {
+          alert("p被点击了");
+        },
+        true
+      );
+
+      document.getElementById("7").addEventListener(
+        "click",
+        function () {
+          alert("div被点击了");
+        },
+        true
+      );
+    </script>
+  </body>
+</html>
