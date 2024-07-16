@@ -1,13 +1,13 @@
-import About from "./About";
-import Contact from "./Contact";
-import HomePage from "./HomePage";
+import About from "./pages/About";
+import Contact from "./pages/Contact";
+import HomePage from "./pages/HomePage";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import Navigation from "./Navigation";
-import Dashboard from "./Dashboard";
-import Profile from "./Profile";
-import Settings from "./Settings";
-import PageNotFound from "./PageNotFound";
-import User from "./User";
+import Navigation from "./components/Navigation";
+import Dashboard from "./pages/Dashboard";
+import Profile from "./pages/Profile";
+import Settings from "./pages/Settings";
+import PageNotFound from "./pages/PageNotFound";
+import User from "./pages/User";
 
 function App() {
   return (
