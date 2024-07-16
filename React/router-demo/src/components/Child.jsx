@@ -1,10 +1,10 @@
 import Grandchild from "./Grandchild";
 
-function Child({ user }) {
+function Child() {
   return (
     <div>
       <h2>Child Component</h2>
-      <Grandchild user={user} />
+      <Grandchild />
     </div>
   );
 }

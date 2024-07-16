@@ -1,8 +1,8 @@
-import Parent from "../components/Parent";
+import { Parent } from "../components/Parent";
 
 function About() {
   const user = {
-    name: "John Doe",
+    name: "John Doe 00",
     email: "john.doe@example.com",
   };
   return (

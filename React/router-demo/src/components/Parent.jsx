@@ -1,12 +1,14 @@
+import { createContext } from "react";
 import Child from "./Child";
 
+const userContext = createContext();
 function Parent({ user }) {
   return (
-    <div>
+    <userContext.Provider value={{ user }}>
       <h2>Parent Component</h2>
-      <Child user={user} />
-    </div>
+      <Child />
+    </userContext.Provider>
   );
 }
 
-export default Parent;
+export { Parent, userContext };
